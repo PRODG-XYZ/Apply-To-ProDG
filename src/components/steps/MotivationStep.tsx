@@ -23,7 +23,7 @@ export default function MotivationStep({ register, errors }: MotivationStepProps
           <span className="text-gray-700">tech and startups?</span>
         </h2>
         <p className="text-lg text-gray-600 font-light italic">
-          This is your chance to be cooler than you think you are.
+          Share your passion and vision with us.
         </p>
       </motion.div>
 
