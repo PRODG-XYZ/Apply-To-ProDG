@@ -1,7 +1,7 @@
 {
-  "name": "Job Application Portal",
-  "short_name": "Job Portal",
-  "description": "A modern, beautiful job application platform",
+  "name": "ProDG Applications",
+  "short_name": "ProDG",
+  "description": "Join the ProDG team! Apply now to be part of our innovative development team.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -9,9 +9,15 @@
   "icons": [
     {
       "src": "/favicon.svg",
+      "sizes": "222x252",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ]
 }
