@@ -24,7 +24,7 @@ export default function AdminDashboard() {
       } else {
         setError('Failed to fetch applications');
       }
-    } catch (error) {
+    } catch {
       setError('An error occurred while fetching applications');
     } finally {
       setLoading(false);

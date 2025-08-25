@@ -89,7 +89,7 @@ export default function SuccessPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-600 mb-4 font-light"
           >
-            We'll review your application and be in touch soon.
+            We&apos;ll review your application and be in touch soon.
           </motion.p>
 
           <motion.p

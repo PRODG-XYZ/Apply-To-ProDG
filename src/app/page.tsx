@@ -62,7 +62,7 @@ export default function LandingPage() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           <h1 className="text-6xl md:text-7xl font-thin text-gray-900 mb-6 tracking-tight">
-            We'd love to get to know you{' '}
+            We&apos;d love to get to know you{' '}
             <span className="font-light text-gray-700">better.</span>
           </h1>
         </motion.div>
@@ -73,7 +73,7 @@ export default function LandingPage() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
           <p className="text-xl md:text-2xl text-gray-600 mb-12 font-light">
-            This won't take long, we promise.
+            This won&apos;t take long, we promise.
           </p>
         </motion.div>
 

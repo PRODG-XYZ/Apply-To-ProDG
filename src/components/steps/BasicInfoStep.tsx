@@ -18,7 +18,7 @@ export default function BasicInfoStep({ register, errors }: BasicInfoStepProps) 
       transition: {
         delay: i * 0.1,
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0.4, 0, 0.2, 1] as const
       }
     })
   };
@@ -27,7 +27,7 @@ export default function BasicInfoStep({ register, errors }: BasicInfoStepProps) 
     <div className="space-y-8">
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-thin text-gray-900 mb-4">
-          Let's start with the basics
+          Let&apos;s start with the basics
         </h2>
         <p className="text-lg text-gray-600 font-light">
           Just a few details to get to know you

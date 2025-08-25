@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+
 import { motion } from 'framer-motion';
 import { UseFormSetValue, UseFormWatch } from 'react-hook-form';
 import { ApplicationFormData } from '@/types/application';
@@ -84,7 +84,7 @@ export default function TechnologiesStep({ setValue, watch }: TechnologiesStepPr
           What technologies do you work with?
         </h2>
         <p className="text-lg text-gray-600 font-light">
-          Select the technologies you're familiar with (optional, but helpful)
+          Select the technologies you&apos;re familiar with (optional, but helpful)
         </p>
       </motion.div>
 
