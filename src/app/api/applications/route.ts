@@ -13,6 +13,8 @@ export async function POST(req: NextRequest) {
       email: data.email,
       phone: data.phone,
       country: data.country,
+      heardAboutUs: data.heardAboutUs,
+      heardAboutUsOther: data.heardAboutUsOther,
       cvUrl: data.cvUrl,
       cvFileName: data.cvFileName,
       motivation: data.motivation,

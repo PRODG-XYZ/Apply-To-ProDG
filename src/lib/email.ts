@@ -21,7 +21,7 @@ interface ApplicationData {
 }
 
 export async function sendApplicationConfirmationEmail(applicationData: ApplicationData) {
-  const { name, email, technologies, submittedAt } = applicationData;
+  const { name, email } = applicationData;
 
   const htmlTemplate = `
 <!DOCTYPE html>
