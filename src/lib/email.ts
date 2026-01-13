@@ -44,7 +44,7 @@ export async function sendApplicationConfirmationEmail(applicationData: Applicat
                             <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                 <tr>
                                     <td align="center" style="padding-bottom: 24px;">
-                                        <img src="https://apply.prodg.studio/favicon.svg" alt="Prodg Logo" width="48" height="52" style="display: block;" />
+                                        <img src="https://apply.prodg.studio/icon.png" alt="Prodg Logo" width="48" height="52" style="display: block;" />
                                     </td>
                                 </tr>
                             </table>
