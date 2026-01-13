@@ -1,15 +1,17 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { UseFormRegister, FieldErrors } from 'react-hook-form';
+import { motion, AnimatePresence } from 'framer-motion';
+import { UseFormRegister, FieldErrors, UseFormWatch } from 'react-hook-form';
 import { ApplicationFormData } from '@/types/application';
 
 interface BasicInfoStepProps {
   register: UseFormRegister<ApplicationFormData>;
   errors: FieldErrors<ApplicationFormData>;
+  watch: UseFormWatch<ApplicationFormData>;
 }
 
-export default function BasicInfoStep({ register, errors }: BasicInfoStepProps) {
+export default function BasicInfoStep({ register, errors, watch }: BasicInfoStepProps) {
+  const heardAboutUs = watch('heardAboutUs');
   const inputVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i: number) => ({
@@ -217,6 +219,66 @@ export default function BasicInfoStep({ register, errors }: BasicInfoStepProps) 
             <p className="text-red-500 text-sm mt-1">{errors.country.message}</p>
           )}
         </motion.div>
+
+        <motion.div
+          custom={4}
+          initial="hidden"
+          animate="visible"
+          variants={inputVariants}
+        >
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            How did you hear about us?
+          </label>
+          <select
+            {...register('heardAboutUs', { required: 'Please tell us how you heard about us' })}
+            className="w-full px-4 py-4 border-b-2 border-gray-200 focus:border-gray-900 outline-none transition-colors duration-300 text-lg bg-transparent text-gray-900 appearance-none cursor-pointer"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e")`,
+              backgroundPosition: 'right 0.5rem center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: '1.5em 1.5em'
+            }}
+          >
+            <option value="" disabled className="text-gray-400">
+              Select an option
+            </option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="friend_referral">Friend referral</option>
+            <option value="employee_referral">Referral by one of our employees</option>
+            <option value="other_social">Other social platform</option>
+            <option value="google_search">Google search</option>
+            <option value="other">Other</option>
+          </select>
+          {errors.heardAboutUs && (
+            <p className="text-red-500 text-sm mt-1">{errors.heardAboutUs.message}</p>
+          )}
+        </motion.div>
+
+        <AnimatePresence>
+          {heardAboutUs === 'other' && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Please specify
+              </label>
+              <input
+                {...register('heardAboutUsOther', { 
+                  required: heardAboutUs === 'other' ? 'Please specify how you heard about us' : false 
+                })}
+                type="text"
+                placeholder="Tell us more..."
+                className="w-full px-4 py-4 border-b-2 border-gray-200 focus:border-gray-900 outline-none transition-colors duration-300 text-lg bg-transparent text-gray-900 placeholder-gray-400"
+              />
+              {errors.heardAboutUsOther && (
+                <p className="text-red-500 text-sm mt-1">{errors.heardAboutUsOther.message}</p>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

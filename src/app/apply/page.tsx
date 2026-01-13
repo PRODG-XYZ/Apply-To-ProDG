@@ -39,7 +39,10 @@ export default function ApplicationForm() {
     
     switch (currentStep) {
       case 1:
-        fieldsToValidate = ['name', 'email', 'phone', 'country'];
+        fieldsToValidate = ['name', 'email', 'phone', 'country', 'heardAboutUs'];
+        if (watch('heardAboutUs') === 'other') {
+          fieldsToValidate.push('heardAboutUsOther');
+        }
         break;
       case 2:
         // CV upload is optional, no validation needed
@@ -102,7 +105,7 @@ export default function ApplicationForm() {
   const renderStep = () => {
     switch (currentStep) {
       case 1:
-        return <BasicInfoStep register={register} errors={errors} />;
+        return <BasicInfoStep register={register} errors={errors} watch={watch} />;
       case 2:
         return <CVUploadStep setValue={setValue} watch={watch} />;
       case 3:

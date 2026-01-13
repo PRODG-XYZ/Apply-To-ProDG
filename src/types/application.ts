@@ -1,9 +1,19 @@
+export type HeardAboutUsOption = 
+  | 'linkedin'
+  | 'friend_referral'
+  | 'employee_referral'
+  | 'other_social'
+  | 'google_search'
+  | 'other';
+
 export interface Application {
   _id?: string;
   name: string;
   email: string;
   phone: string;
   country: string;
+  heardAboutUs: HeardAboutUsOption;
+  heardAboutUsOther?: string;
   cvUrl?: string;
   cvFileName?: string;
   motivation: string;
@@ -22,6 +32,8 @@ export interface ApplicationFormData {
   email: string;
   phone: string;
   country: string;
+  heardAboutUs: HeardAboutUsOption;
+  heardAboutUsOther?: string;
   cvUrl?: string;
   cvFileName?: string;
   motivation: string;

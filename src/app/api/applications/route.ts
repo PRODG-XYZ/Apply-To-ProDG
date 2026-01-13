@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import clientPromise from '@/lib/mongodb';
 import { Application } from '@/types/application';
 import { sendSlackNotification } from '@/lib/slack';
+import { sendApplicationConfirmationEmail } from '@/lib/email';
 
 export async function POST(req: NextRequest) {
   try {
@@ -40,6 +41,19 @@ export async function POST(req: NextRequest) {
       linkedinUrl: application.linkedinUrl,
       submittedAt: application.submittedAt
     });
+
+    // Send confirmation email to applicant
+    try {
+      await sendApplicationConfirmationEmail({
+        name: application.name,
+        email: application.email,
+        technologies: application.technologies,
+        submittedAt: application.submittedAt
+      });
+    } catch (emailError) {
+      console.error('Failed to send confirmation email:', emailError);
+      // Don't fail the entire application submission if email fails
+    }
 
     return NextResponse.json({ 
       success: true, 
