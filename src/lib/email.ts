@@ -70,10 +70,10 @@ export async function sendApplicationConfirmationEmail(applicationData: Applicat
                                     <td style="padding-bottom: 16px;">
                                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                             <tr>
-                                                <td width="32" valign="top" style="padding-right: 16px;">
-                                                    <table cellpadding="0" cellspacing="0" border="0" width="32" height="32" style="background-color: #f5f5f7; border-radius: 16px;">
+                                                <td width="40" valign="top" style="padding-right: 16px;">
+                                                    <table cellpadding="0" cellspacing="0" border="0" width="40" height="40" style="min-width: 40px; background-color: #f5f5f7; border-radius: 20px;">
                                                         <tr>
-                                                            <td align="center" valign="middle" height="32" style="color: #86868b; font-size: 14px; font-weight: 600;">1</td>
+                                                            <td align="center" valign="middle" height="40" style="color: #86868b; font-size: 14px; font-weight: 600;">1</td>
                                                         </tr>
                                                     </table>
                                                 </td>
@@ -91,10 +91,10 @@ export async function sendApplicationConfirmationEmail(applicationData: Applicat
                                     <td style="padding-bottom: 16px;">
                                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                             <tr>
-                                                <td width="32" valign="top" style="padding-right: 16px;">
-                                                    <table cellpadding="0" cellspacing="0" border="0" width="32" height="32" style="background-color: #f5f5f7; border-radius: 16px;">
+                                                <td width="40" valign="top" style="padding-right: 16px;">
+                                                    <table cellpadding="0" cellspacing="0" border="0" width="40" height="40" style="min-width: 40px; background-color: #f5f5f7; border-radius: 20px;">
                                                         <tr>
-                                                            <td align="center" valign="middle" height="32" style="color: #86868b; font-size: 14px; font-weight: 600;">2</td>
+                                                            <td align="center" valign="middle" height="40" style="color: #86868b; font-size: 14px; font-weight: 600;">2</td>
                                                         </tr>
                                                     </table>
                                                 </td>
@@ -112,10 +112,10 @@ export async function sendApplicationConfirmationEmail(applicationData: Applicat
                                     <td>
                                         <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                             <tr>
-                                                <td width="32" valign="top" style="padding-right: 16px;">
-                                                    <table cellpadding="0" cellspacing="0" border="0" width="32" height="32" style="background-color: #f5f5f7; border-radius: 16px;">
+                                                <td width="40" valign="top" style="padding-right: 16px;">
+                                                    <table cellpadding="0" cellspacing="0" border="0" width="40" height="40" style="min-width: 40px; background-color: #f5f5f7; border-radius: 20px;">
                                                         <tr>
-                                                            <td align="center" valign="middle" height="32" style="color: #86868b; font-size: 14px; font-weight: 600;">3</td>
+                                                            <td align="center" valign="middle" height="40" style="color: #86868b; font-size: 14px; font-weight: 600;">3</td>
                                                         </tr>
                                                     </table>
                                                 </td>
